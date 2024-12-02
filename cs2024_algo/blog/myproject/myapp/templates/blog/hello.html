@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Django Sample</title>
+  </head>
+  <body>
+    <h2>Hello, {{name}}</h2>
+    <h2>Today's weather:{{weather}}  </h2>
+    <ul>
+      {% for item in wearther_detail %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+    <h2>Today's fortune:  {{fortune}}</h2>
+  </body>
+</html>
