@@ -25,11 +25,13 @@
     <br>
 
     {% if articles %}
-      <p>No article.</p>
-    {% else %}
-      {% for item in articles%}
-        <p>{{item}}</p>
-      {%endfor%}
+      {% for article in articles %}
+      <a href="{% url 'detail' article.id%}">{{article.title}}</a>
+      <small>{{article.posted_at}}</small>
+      <div>{{article.body | linebreaksbr}}</div>
+      {% endfor %}
+      {% else %}
+      <p>No article</p>
     {%endif %}
 
   </body>
